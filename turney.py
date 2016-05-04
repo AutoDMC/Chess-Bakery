@@ -14,16 +14,36 @@ import time
 import logging
 import os
 import sys
+from optparse import OptionParser
 from dateutil.relativedelta import relativedelta
 
 from colorama import init, Fore, Back, Style
 init()
 
-logging.basicConfig(stream=sys.stderr, level=logging.ERROR)
+# Parse Arguments
+parser = OptionParser("usage: %prog [options] white-engine black-engine")
+parser.add_option('-t', '--tourney-time', dest='tourney_time', default=300, type='float',
+                  help="The initial clock time available for each player, in seconds")
+parser.add_option('-i', '--time-increment', dest='time_increment', default=0, type='float',
+                  help="Time increment added to player's clock after they finish their move.")
+parser.add_option('--white-serial-dev', dest='white_serial_dev', default='COM3', type='string',
+                  help="Device name for White's RaspberryPi serial port")
+parser.add_option('--black-serial-dev', dest='black_serial_dev', default='COM4', type='string',
+                  help="Device name for Black's RaspberryPi serial port")
+parser.add_option('-d', '--debug', action='store_true', dest='debug',
+                  help="Spew debug messages all over the console.")
+
+(options, args) = parser.parse_args()
+if len(args) != 2:
+    parser.error("Incorrect number of engines.  It takes two to tango.")
+
+if options.debug:
+    logging.basicConfig(stream=sys.stderr, level=logging.ERROR)
+else:
+    logging.basicConfig(stream=sys.stderr, level=logging.ERROR)
 
 termwidth = 75  # Width of the terminal display
 stopsleep = .1  # How much time to sleep before clearing the buffer after a "stop".  This time is added back to the player's clock
-turneytime = 300  # Move clock in seconds for both players.
 
 # Put the starting position for this match here:
 board = chess.Board("rnbqkbnr/pppp1ppp/8/4p3/4PP2/8/PPPP2PP/RNBQKBNR b KQkq - 3 1")
@@ -33,7 +53,7 @@ chesspi =\
     {
         'white': {
             'friendlyname': 'Stockfish',
-            'port': 'COM3',
+            'port': options.white_serial_dev,
             'engine': 'stockfish',
             'matchstring': 'Stockfish',
             'serial': False,
@@ -41,7 +61,7 @@ chesspi =\
         },
         'black': {
             'friendlyname': 'Fruit',
-            'port': 'COM4',
+            'port': options.black_serial_dev,
             'engine': 'fruit',
             'matchstring': 'Fruit',
             'serial': False,
@@ -54,10 +74,9 @@ chesspi =\
 # Clock rules for this match:
 clock =\
     {
-        'white_time_seconds': turneytime,
-        'black_time_seconds': turneytime,
-        'move_time_seconds_increment': 0,
-        'white_move': True,
+        'white_time_seconds': options.tourney_time,
+        'black_time_seconds': options.tourney_time,
+        'move_time_seconds_increment': options.time_increment,
     }
 
 
