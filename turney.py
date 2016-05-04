@@ -19,11 +19,11 @@ from dateutil.relativedelta import relativedelta
 from colorama import init, Fore, Back, Style
 init()
 
-logging.basicConfig(stream=sys.stderr, level=logging.DEBUG)
+logging.basicConfig(stream=sys.stderr, level=logging.ERROR)
 
 termwidth = 75  # Width of the terminal display
 stopsleep = .1  # How much time to sleep before clearing the buffer after a "stop".  This time is added back to the player's clock
-turneytime = 30000  # Move clock in seconds for both players.
+turneytime = 300  # Move clock in seconds for both players.
 
 # Put the starting position for this match here:
 board = chess.Board("rnbqkbnr/pppp1ppp/8/4p3/4PP2/8/PPPP2PP/RNBQKBNR b KQkq - 3 1")
@@ -32,7 +32,7 @@ board = chess.Board("rnbqkbnr/pppp1ppp/8/4p3/4PP2/8/PPPP2PP/RNBQKBNR b KQkq - 3 
 chesspi =\
     {
         'white': {
-            'friendlyname': 'Stockfish #1',
+            'friendlyname': 'Stockfish',
             'port': 'COM3',
             'engine': 'stockfish',
             'matchstring': 'Stockfish',
@@ -40,14 +40,16 @@ chesspi =\
             'pondermove': False,
         },
         'black': {
-            'friendlyname': 'Stockfish #2',
+            'friendlyname': 'Fruit',
             'port': 'COM4',
-            'engine': './stockfish',
-            'matchstring': 'Stockfish',
+            'engine': 'fruit',
+            'matchstring': 'Fruit',
             'serial': False,
             'pondermove': False,
         },
     }
+# UCI Engines available in Debian Jessie repo:  stockfish, fruit, glaurung, toga2
+# Xboard engines:  crafty, hoichess, phalanx, sjeng,
 
 # Clock rules for this match:
 clock =\
@@ -214,9 +216,6 @@ while True:
     playermove = playermove.split()  # bestmove [x1y1] ponder [x2y2]
     board.push(chess.Move.from_uci(playermove[1]))
     chesspi[player]['pondermove'] = playermove[3]
-
-    print board.status()
-    print board.move_stack
 
     send(player, 'position fen {} moves {}'.format(board.fen(), chesspi[player]['pondermove']))
     send(player, 'go ponder')
