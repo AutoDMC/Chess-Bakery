@@ -1,0 +1,24 @@
+[Event "Gamium Bakery Computer Chess Championship Series"]
+[Site "Gamium HQ, Houston, Texas"]
+[Date "2016-05-07 02:23:38.636000"]
+[Round "?"]
+[White "Fruit"]
+[Black "Stockfish"]
+[Result "0-1"]
+[SetUp "1"]
+[FEN "rnbqkbnr/pppp1ppp/8/4p3/4PP2/8/PPPP2PP/RNBQKBNR b KQkq - 3 1"]
+
+1... exf4 2. Nf3 Be7 3. d3 Bh4+ 4. Ke2 d5 5. Bxf4 Bg4 6. Nc3 g5 7. Bd2 dxe4 8. dxe4 Nc6 9. Be3 Qe7 10. Nd5 Qd6 11. g3 f5 12. exf5 Nh6 13. f6 Nf5 14. Bg2 Ne5 15. Bf2 Rd8 16. c4 c6 17. gxh4 cxd5 18. hxg5 O-O 19. Kf1 Nxf3 20. Bxf3 Bh3+ 21. Kg1 Qf4 22. Bxd5+ Kh8 23. f7 Rxf7 24. Qe1 Rxd5 25. Bg3 Qf3 26. Qe8+ Kg7 27. Be5+ Kg6 28. Qe6+ Kh5 29. Qxf7+ Kg4 30. Qxf5+ Kxf5 31. cxd5 Qg2# 0-1
+
+[Event "Gamium Bakery Computer Chess Championship Series"]
+[Site "Gamium HQ, Houston, Texas"]
+[Date "2016-05-07 03:40:37.849000"]
+[Round "?"]
+[White "Fruit"]
+[Black "Stockfish"]
+[Result "0-1"]
+[SetUp "1"]
+[FEN "rnbqkbnr/pppp1ppp/8/4p3/4PP2/8/PPPP2PP/RNBQKBNR b KQkq - 3 1"]
+
+1... exf4 2. Nf3 Be7 3. d3 Bh4+ 4. Ke2 d5 5. Bxf4 dxe4 6. dxe4 Qe7 7. Qd3 Nc6 8. Nc3 Be6 9. Nxh4 Qxh4 10. Bxc7 Nf6 11. Qg3 Qh5+ 12. Kd2 O-O 13. Re1 Nb4 14. Kc1 Rfc8 15. Kb1 Nxa2 16. Nxa2 Qc5 17. e5 Nh5 18. Qf3 Rxc7 19. Nc3 g6 20. g4 Ng7 21. Bd3 Qa5 22. Be4 Kh8 23. h4 Rac8 24. Rd1 b5 25. h5 Rxc3 26. bxc3 Kg8 27. Rd3 b4 28. hxg6 bxc3 29. gxh7+ Kh8 30. Rxc3 Rxc3 31. Qf6 Qb6+ 32. Kc1 Qe3+ 33. Kb2 Rc8 34. Bd3 Qd4+ 35. Kc1 Qxd3 36. Qxg7+ Kxg7 37. h8=Q+ Rxh8 38. cxd3 Rxh1+ 39. Kd2 Bxg4 40. Ke3 f6 41. d4 Rd1 42. e6 Bxe6 43. Ke4 f5+ 44. Ke3 Kf6 45. d5 Bxd5 46. Ke2 Rd4 47. Kf2 Ke5 48. Ke3 Be4 49. Kf2 Kf4 50. Ke2 Kg3 51. Ke3 Rd1 52. Ke2 Bf3+ 53. Ke3 f4# 0-1
+

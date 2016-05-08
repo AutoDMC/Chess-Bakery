@@ -32,13 +32,17 @@ parser.add_option('--black-serial-dev', dest='black_serial_dev', default='COM4',
                   help="Device name for Black's RaspberryPi serial port")
 parser.add_option('-d', '--debug', action='store_true', dest='debug',
                   help="Spew debug messages all over the console.")
+parser.add_option('-f', '--friendly', action='store_true', dest='friendly',
+                  help="Store game PGN in the 'Friendly Game' Database.")
+parser.add_option('-o', '--pgn-out', dest='pgn_filename', type='string',
+                  help="Specify a specific location for the output PGN.")
 
 (options, args) = parser.parse_args()
 if len(args) != 2:
     parser.error("Incorrect number of engines.  It takes two to tango.")
 
 if options.debug:
-    logging.basicConfig(stream=sys.stderr, level=logging.ERROR)
+    logging.basicConfig(stream=sys.stderr, level=logging.DEBUG)
 else:
     logging.basicConfig(stream=sys.stderr, level=logging.ERROR)
 
@@ -273,4 +277,13 @@ pgn.headers['Black'] = chesspi['black']['friendlyname']
 pgn.headers['Result'] = gameresult
 print(pgn)
 
+if options.pgn_filename:
+    filename = options.pgn_filename
+else:
+    if options.friendly:
+        filename = 'games/friendly/' + time.strftime("%Y%m%d") + '.pgn'
+    else:
+        print "Not a friendly game at all!"
+with open(filename, "a") as pgnfile:
+    pgnfile.write(pgn.__str__() + "\n\n")
 shutdown()
