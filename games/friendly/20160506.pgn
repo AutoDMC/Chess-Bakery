@@ -1,0 +1,23 @@
+
+[Event "Gamium Bakery Computer Chess Championship Series"]
+[Site "Gamium HQ, Houston, Texas"]
+[Date "2016-05-06 21:19:00.864000"]
+[Round "?"]
+[White "Fruit"]
+[Black "Stockfish"]
+[Result "0-1"]
+[SetUp "1"]
+[FEN "rnbqkbnr/pppp1ppp/8/4p3/4PP2/8/PPPP2PP/RNBQKBNR b KQkq - 3 1"]
+
+1... exf4 2. Nf3 Be7 3. d3 Bh4+ 4. Ke2 d5 5. Bxf4 dxe4 6. dxe4 Qf6 7. Bxc7 Qc6 8. Qd6 Qxc2+ 9. Nbd2 Be7 10. Qe5 Nd7 11. Qxg7 Bf6 12. Qg3 Ne7 13. Rb1 Nc5 14. e5 Nf5 15. Qf4 Be7 16. Ne1 Nd3 17. Nxc2 Nxf4+ 18. Ke1 O-O 19. Bc4 Nxg2+ 20. Kf2 Ngh4 21. Ne4 Be6 22. Bd3 Rac8 23. Bd6 Ng6 24. Bxe7 Nfxe7 25. Rhg1 Kh8 26. Nc3 Nf4 27. Rg3 Nxd3+ 28. Rxd3 Nc6 29. Re1 Rg8 30. Rd2 Rg5 31. Ne3 Rh5 32. Rh1 Rh3 33. Ncd5 Nxe5 34. Kg2 Rg8+ 35. Kf2 Rd8 36. Ke2 Ng4 37. Rdd1 Re8 38. Kd2 Nf2 39. Rhe1 Nxd1 40. Rxd1 Rd8 41. Kc1 Rh5 42. Nc3 Rxd1+ 43. Kxd1 Rxh2 44. Ne2 Bxa2 45. Kd2 Kg7 46. Ng4 Rh4 47. Ne3 Be6 48. Nc2 h5 49. Ncd4 Bg4 50. b4 Rh2 51. Ke3 h4 52. b5 h3 53. b6 axb6 54. Nf4 Rh1 55. Nxh3 Rxh3+ 56. Kf4 Bd7 57. Nf3 Rxf3+ 58. Kxf3 Bc6+ 59. Ke3 b5 60. Kd3 f5 61. Kd4 f4 62. Kd3 b4 63. Kc4 f3 64. Kd3 b3 65. Kd2 Be4 66. Kd1 b2 67. Ke1 b1=Q+ 68. Kf2 Qb6+ 69. Kg3 f2 70. Kf4 f1=Q+ 71. Kxe4 Qe6+ 72. Kd4 Qfc4# 0-1
+[Event "Gamium Bakery Computer Chess Championship Series"]
+[Site "Gamium HQ, Houston, Texas"]
+[Date "2016-05-06 21:39:37.343000"]
+[Round "?"]
+[White "Fruit"]
+[Black "Stockfish"]
+[Result "0-1"]
+[SetUp "1"]
+[FEN "rnbqkbnr/pppp1ppp/8/4p3/4PP2/8/PPPP2PP/RNBQKBNR b KQkq - 3 1"]
+
+1... exf4 2. Nf3 Be7 3. d3 Bh4+ 4. Ke2 d5 5. Bxf4 Bg4 6. Nc3 g5 7. Bd2 Nc6 8. Nxd5 Nd4+ 9. Ke3 Nf6 10. Kxd4 c6 11. c4 cxd5 12. Qa4+ Bd7 13. Qb4 a5 14. Qd6 Ra6 15. Qc5 Rc6 16. Qa7 dxc4 17. Nxh4 c3 18. Bxg5 cxb2 19. Rb1 Rc2 20. Rxb2 Rxb2 21. Kc3 Rb6 22. Nf3 Qc7+ 23. Kd2 Rb2+ 24. Ke1 Ng4 25. Nd2 f6 26. Qd4 Qc1+ 27. Ke2 Rb4 28. Nc4 Qxg5 29. a3 Rb1 30. g3 Qc1 31. Kf3 Qd1+ 32. Kg2 Qc2+ 33. Kf3 Nxh2+ 34. Rxh2 Rxf1+ 35. Rf2 Qd1+ 36. Kf4 Rg8 37. Nd6+ Ke7 38. Nf5+ Bxf5 39. Qc5+ Ke8 40. Qb5+ Bd7 41. Qxd7+ Kxd7 42. Rxf1 Qxf1+ 43. Ke3 Rxg3+ 44. Kd4 Qxd3+ 45. Kc5 Kc7 46. e5 b6# 0-1
